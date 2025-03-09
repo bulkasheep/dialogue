@@ -1,0 +1,47 @@
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.username {
+    color: hsl(var(--text-primary));
+}
+
+.status {
+    color: hsl(var(--icon-secondary));
+}
+
+.small.user {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 8px;
+}
+
+.small.info {
+    gap: 2px;
+}
+
+.participant.user {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+.participant.info {
+    gap: 10px;
+}
+.participant.status {
+    background: hsl(var(--border-secondary));
+    align-self: flex-start;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+@media (max-width: 799px) {
+    .small.user {
+        gap: 4px;
+    }
+    .participant.info {
+        gap: 6px;
+    }
+}

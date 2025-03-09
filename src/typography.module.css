@@ -1,0 +1,156 @@
+.h1 {
+    font-family: "Neutral Face";
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.h2 {
+    font-family: "Neutral Face";
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.h3 {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.h4 {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.h5 {
+    font-family: "Neutral Face";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.subtitle {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.body {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.body2 {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.body3 {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.button {
+    font-family: "Neutral Face";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 1px;
+}
+
+.button2 {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.button3 {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.overline {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.description {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+@media (max-width: 799px) {
+    .h1 {
+        font-size: 40px;
+    }
+    
+    .h2 {
+        font-size: 28px;
+        line-height: 120%;
+    }
+    
+    .h3 {
+        font-size: 16px;
+    }
+    
+    .h4 {
+        font-size: 16px;
+    }
+    
+    .h5 {
+        font-family: "Inter";
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .body {
+        font-size: 12px;
+        line-height: 133%;
+    }
+    
+    .body2 {
+        font-size: 12px;
+    }
+    
+    .button {
+        font-size: 12px;
+    }
+    
+    .button2 {
+        font-size: 12px;
+    }
+
+    .button3 {
+        font-size: 12px;
+    }
+    
+    .overline {
+        font-size: 10px;
+    }
+    
+    .description {
+        line-height: 140%;
+    }
+}

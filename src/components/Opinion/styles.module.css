@@ -1,0 +1,41 @@
+.opinion {
+    max-width: 522px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+.image {
+    height: 390px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.description {
+    color: hsl(var(--text-secondary));
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+@media (max-width: 799px) {
+    .opinion {
+        max-width: 318px;
+        gap: 12px;
+    }
+    .image {
+        height: 238px;
+    }
+    .info {
+        gap: 8px;
+    }
+}

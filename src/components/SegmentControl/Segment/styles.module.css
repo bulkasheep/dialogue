@@ -1,0 +1,16 @@
+.segment {
+    background: transparent;
+    color: hsl(var(--text-primary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 12px 16px;
+    transition: none 0.25s ease;
+    transition-property: background, box-shadow;
+}
+
+.segment.checked {
+    background: hsl(var(--bg-secondary));
+    box-shadow: 0px 1px 0px 0px hsla(var(--dark-blue), 25%);
+}

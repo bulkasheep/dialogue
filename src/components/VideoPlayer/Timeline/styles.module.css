@@ -1,0 +1,23 @@
+.player.timeline {
+    --played: calc(100% / (1 / var(--played-fr)));
+    --loaded: calc(100% / (1 / var(--loaded-fr)));
+}
+
+.list.timeline {
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 1439px) {
+    .list.timeline::-webkit-scrollbar {
+        display: none;
+    }
+    .list.timeline {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+}

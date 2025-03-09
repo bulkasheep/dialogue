@@ -1,0 +1,15 @@
+.section {
+    height: 75vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 599px) {
+    .section {
+        align-items: stretch;
+        text-align: center;
+    }
+}

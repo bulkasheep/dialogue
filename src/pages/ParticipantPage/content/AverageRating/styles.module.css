@@ -1,0 +1,5 @@
+.stars {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2px;
+}

@@ -1,0 +1,117 @@
+
+.button {
+    color: hsl(var(--text-secondary));
+    font-family: "Neutral Face";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    padding: 0px;
+}
+
+.menu {
+    background: hsl(var(--bg-secondary));
+    position: absolute;
+    top: 100%;
+    right: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px;
+    border: 1px ;
+    border-radius: 24px;
+    opacity: 100%;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    opacity: 0%;
+}
+
+.show {
+    display: flex;
+    opacity: 100%;
+    animation-name: showing;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes showing {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.close {
+    display: none;
+    animation-name: closing;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes closing {
+    from {
+        display: flex;
+        opacity: 100%;
+    }
+    to {
+        display: none;
+        opacity: 0%;
+    }
+}
+
+.menu > *:nth-child(n+2)::before {
+    content: "";
+    display: block;
+    border: none;
+    background: hsl(var(--border-secondary));
+    min-height: 1px;
+    width: 100%;
+}
+
+.account {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 24px;
+}
+.accountData {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 8px;
+}
+.data {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+.logout {
+    border-radius: 100px;
+    border: 1px solid hsl(var(--text-primary));
+    background: transparent var(--40-logout-icon) no-repeat center center;
+    width: 40px;
+    height: 40px;
+}
+
+.navigation {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.const {
+    color: hsl(var(--coral));
+}
+
+@media (max-width: 799px) {
+    .menu {
+        right: 20px;
+    }
+}

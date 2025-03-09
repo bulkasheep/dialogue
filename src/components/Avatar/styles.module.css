@@ -1,0 +1,35 @@
+.avatar {
+    color: hsl(var(--coral));
+    background: transparent;
+    object-fit: cover;
+    object-position: center;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid transparent;
+    border-radius: 500px;
+    aspect-ratio: 1 / 1;
+    user-select: none;
+}
+
+.avatar.me {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 46px;
+    background: hsla(var(--blue), 80%);
+    border-color: hsl(var(--blue));
+}
+
+.avatar.big {
+    width: 200px;
+    border-width: 5px;
+    border-color: hsl(var(--coral));
+}
+
+.avatar.mini {
+    width: 40px;
+    border-width: 1px;
+    border-color: hsl(var(--coral));
+}

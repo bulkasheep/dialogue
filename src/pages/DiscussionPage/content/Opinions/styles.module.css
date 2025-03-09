@@ -1,0 +1,11 @@
+.button {
+    display: none;
+    flex-flow: column;
+}
+
+@media (max-width: 799px) {
+    .button {
+        display: flex;
+        padding: 0px 20px;
+    }
+}

@@ -1,0 +1,48 @@
+.card {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    width: 522px;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    gap: 20px;
+}
+
+.content {
+    color: hsl(var(--text-secondary));
+}
+
+.mini .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-bottom: auto;
+}
+
+.link {
+    justify-self: flex-end;
+}
+
+.full .link {
+    display: none;
+}
+
+.mini.card {
+    padding: 28px;
+}
+
+@media (max-width: 799px) {
+    .mini .content {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+    .card {
+        width: auto;
+        gap: 12px;
+        padding: 0;
+    }
+    .mini.card {
+        padding: 16px;
+    }
+}

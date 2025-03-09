@@ -1,0 +1,24 @@
+.breadcrumbs,
+.breadcrumbs li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.breadcrumbs li:nth-child(n+2)::before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 17px;
+    background: radial-gradient(circle at 50%, hsla(var(--text-disabled)) 0px, hsla(var(--text-disabled)) 1px, transparent 2px);
+}
+
+.breadcrumbs a {
+    color: hsl(var(--blue));
+}
+
+.breadcrumbs {
+    color: hsl(var(--text-secondary));
+    padding: 2px 0px;
+}

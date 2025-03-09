@@ -1,0 +1,41 @@
+.background {
+    background: hsla(var(--text-primary), 80%);
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    z-index: 10;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 132px;
+}
+
+.modal {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    padding: 28px;
+}
+
+.closed.background {
+    display: none;
+}
+
+.button {
+    position: absolute;
+    background: transparent var(--24-x-icon) no-repeat center center;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 16px;
+}
+
+@media (max-width: 799px) {
+    .background {
+        padding: 110px;
+    }
+}

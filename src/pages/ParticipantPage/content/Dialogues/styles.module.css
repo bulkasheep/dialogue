@@ -1,0 +1,11 @@
+.dialogues {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+@media (max-width: 799px) {
+    .dialogues {
+        gap: 8px;
+    }
+}

@@ -1,0 +1,63 @@
+.quote {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.text {
+    color: hsl(var(--text-primary));
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    gap: 8px;
+}
+
+.author {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;
+    padding: 0px 36px;
+}
+
+.name {
+    color: hsl(var(--text-primary));
+}
+
+.position {
+    color: hsl(var(--icon-secondary));
+}
+
+.orange.text::before,
+.orange.text::after,
+.blue.text::before,
+.blue.text::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 16px;
+}
+
+.orange.text::after,
+.blue.text::after {
+    align-self: flex-end;
+}
+
+.orange.text::before {
+    background: var(--quotation-left-orange-icon) no-repeat center center;
+}
+
+.orange.text::after {
+    background: var(--quotation-right-orange-icon) no-repeat center center;
+}
+
+.blue.text::before {
+    background: var(--quotation-left-blue-icon) no-repeat center center;
+}
+
+.blue.text::after {
+    background: var(--quotation-right-blue-icon) no-repeat center center;
+}

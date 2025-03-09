@@ -1,0 +1,25 @@
+.participant {
+    background: hsl(var(--bg-secondary));
+    width: 280px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.about {
+    color: hsl(var(--text-secondary));
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+@media (max-width: 799px) {
+    .participant {
+        gap: 6px;
+        padding: 16px;
+    }
+}

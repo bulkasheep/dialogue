@@ -1,0 +1,17 @@
+.dialogues {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+.button {
+    align-self: flex-start;
+}
+
+@media (max-width: 799px) {
+    .dialogues {
+        gap: 8px;
+    }
+    .button {
+        align-self: stretch;
+    }
+}

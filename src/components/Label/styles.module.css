@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 9px;
+}
+
+.label {
+    color: hsl(var(--text-primary));
+    line-height: 150%;
+    vertical-align: middle;
+}

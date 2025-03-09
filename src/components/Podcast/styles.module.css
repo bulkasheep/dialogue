@@ -1,0 +1,123 @@
+.podcast {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 20px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: auto max-content;
+    grid-auto-flow: row;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.description {
+    color: hsl(var(--text-secondary));
+}
+
+.cover {
+    align-items: flex-start;
+}
+
+.cover::after {
+    background-image: var(--48-play-icon), radial-gradient(circle at 50%, #FFF, #FFF 24px, transparent 25px);
+    background-size: 28px 28px, auto;
+}
+
+.cover:hover::after,
+.cover:focus::after {
+    background-size: 32px 32px, auto;
+}
+
+.cover:active::after {
+    background-size: 30px 30px, auto;
+}
+
+.image {
+    height: 126px;
+}
+
+.participants,
+.participant {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.participant ~ .participant::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: transparent var(--24-x-icon) no-repeat center center;
+}
+
+.duration {
+    color: hsl(var(--text-secondary));
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.modal {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 799px) {
+    .dialogue {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 8px;
+        padding: 16px;
+    }
+    .section {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0px;
+    }
+    .content {
+        gap: 0;
+    }
+    .info {
+        gap: 4px;
+    }
+    .image {
+        height: 78px;
+    }
+    .participants {
+        display: none;
+    }
+    .cover::after {
+        background-image: var(--48-play-icon), radial-gradient(circle at 50%, #FFF, #FFF 20px, transparent 21px);
+        background-size: 20px 20px, auto;
+    }
+    .cover:hover::after,
+    .cover:focus::after {
+        background-size: 24px 24px, auto;
+    }
+    .cover:active::after {
+        background-size: 22px 22px, auto;
+    }
+    .duration {
+        padding: 0;
+    }
+}

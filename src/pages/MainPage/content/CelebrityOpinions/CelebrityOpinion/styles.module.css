@@ -1,0 +1,55 @@
+.celebrity {
+    background: hsl(var(--bg-secondary));
+    width: 305px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    border-radius: 20px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 6px;
+}
+
+.name {
+    color: hsl(var(--text-dark));
+}
+
+.position {
+    font-size: 14px;
+    line-height: 115%;
+    color: hsl(var(--text-light-grey));
+}
+
+.opinion {
+    color: hsl(var(--text-secondary));
+}
+
+.mini .opinion {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    padding: 28px;
+}
+
+.link {
+    align-self: flex-end;
+}
+
+.full .link {
+    display: none;
+}
+
+@media (max-width: 799px) {
+    .celebrity {
+        width: 318px;
+    }
+    .celebrity.mini {
+        padding: 16px;
+    }
+}

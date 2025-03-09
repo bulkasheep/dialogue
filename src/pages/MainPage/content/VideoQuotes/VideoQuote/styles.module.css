@@ -1,0 +1,13 @@
+.cover img {
+    height: 390px;
+}
+
+.participant {
+    padding: 20px 0;
+}
+
+@media (max-width: 799px) {
+    .cover img {
+        height: 238px;
+    }
+}

@@ -1,0 +1,54 @@
+.opinion {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 877fr 323fr;
+    gap: 24px;
+    padding: 28px;
+    aspect-ratio: 128 / 55;
+    overflow: hidden;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    display: grid;
+    grid-template-rows: max-content auto;
+    gap: 40px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.quotes {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+@media (max-width: 1199px) {
+    .opinion {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 12px;
+        padding: 16px;
+        aspect-ratio: unset;
+    }
+    .content {
+        gap: 0;
+    }
+    .quotes {
+        display: none;
+    }
+}

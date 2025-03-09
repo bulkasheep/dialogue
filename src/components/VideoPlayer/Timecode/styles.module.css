@@ -1,0 +1,206 @@
+.timecode {
+    user-select: none;
+}
+
+.preview {
+    overflow: hidden;
+}
+
+.timeline.timecode {
+    --left: calc( 100% / 
+        ( 1 / 
+            ( 
+                var(--start) / 
+                    ( var(--duration) / 1000 )
+            )
+        )
+    );
+
+    --width: calc( 100% / 
+        ( 1 / 
+            ( 
+                ( var(--end) - var(--start) ) / 
+                    ( var(--duration) / 1000 )
+            )
+        )
+    );
+
+    position: absolute;
+    top: 0;
+    left: var(--left);
+    bottom: 0;
+    width: var(--width);
+    background: transparent;
+}
+
+.timeline.timecode:hover {
+    background: hsla(0, 0%, 100%, 0.25);
+}
+
+.timeline .container {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 210px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 16px;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.timeline.timecode:hover .container {
+    opacity: 100%;
+}
+
+.timeline .preview {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.timeline .comment,
+.timeline .time {
+    font-weight: 500;
+    color: white;
+}
+
+.timeline .time {
+    background: hsla(var(--bg-secondary), 20%);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.timeline .segment {
+    display: none;
+}
+
+.list.timecode {
+    --played: calc( 
+        ( ( var(--played-fr) * (var(--duration) / 1000) ) - var(--start) ) /
+        ( var(--end) - var(--start) )
+    );
+    --is-start: calc( max(0, var(--played)) / var(--played) );
+    --is-end: calc( (max(1, var(--played)) - 1) / (var(--played) - 1) );
+}
+
+.list .container {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "preview info"
+    "preview comment";
+    gap: 8px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.list .preview {
+    border-radius: 8px;
+    position: relative;
+    width: auto;
+    height: 75px;
+    grid-area: preview;
+}
+
+.list .image {
+    width: auto;
+    height: 100%;
+}
+
+.list .preview::after {
+    --is-playing: calc( var(--is-start) - var(--is-end) );
+    
+    content: "";
+    background: black;
+    border-radius: inherit;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    opacity: calc(var(--is-playing) * 0.51);
+}
+
+.list .comment {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    grid-area: comment;
+}
+
+.list .info {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    grid-area: info;
+}
+
+.list .comment,
+.list .time {
+    font-weight: 500;
+}
+
+.list .time {
+    --is-played: calc( 100% / ( 1 / var(--is-start)) );
+    --background: to right,
+        hsl(var(--coral)) 0%,
+        hsl(var(--coral)) var(--is-played),
+        transparent var(--is-played);
+    
+    background: hsl(var(--timeline)) -moz-linear-gradient(var(--background));
+    background: hsl(var(--timeline)) -webkit-linear-gradient(var(--background));
+    background: hsl(var(--timeline)) linear-gradient(var(--background));
+    border-radius: 4px;
+    color: white;
+    line-height: 110%;
+    padding: 4px;
+}
+
+.list .segment {
+    --played-percent: calc(var(--played) * 100%);
+    --gradient: to right,
+        hsl(var(--coral)) 0%,
+        hsl(var(--coral)) var(--played-percent),
+        transparent var(--played-percent);
+    
+    background: hsl(var(--timeline)) -moz-linear-gradient(var(--gradient));
+    background: hsl(var(--timeline)) -webkit-linear-gradient(var(--gradient));
+    background: hsl(var(--timeline)) linear-gradient(var(--gradient));
+
+    height: 4px;
+}
+
+.list .comment {
+    color: hsl(var(--text-dark));
+    font-size: 14px;
+}
+
+@media (max-width: 1439px) {
+    .timecode {
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+    .list .container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .list .preview,
+    .list .comment {
+        margin-right: 16px;
+    }
+    .list .preview {
+        align-self: flex-start;
+    }
+    .list .comment {
+        width: 120px;
+        order: 1;
+    }
+}

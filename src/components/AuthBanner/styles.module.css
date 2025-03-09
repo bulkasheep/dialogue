@@ -1,0 +1,73 @@
+.container {
+    background: hsl(var(--bg-primary));
+    border-radius: 20px;
+    width: 522px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: center;
+    padding: 28px;
+}
+
+.grey {
+    background: hsl(var(--bg-primary));
+}
+
+.white {
+    background: hsl(var(--bg-secondary));
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.h3 {
+    color: hsl(var(--text-primary));
+}
+
+.body {
+    color: hsl(var(--text-secondary));
+}
+
+.banner {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.logins {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.modal .logins {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+}
+
+@media (max-width: 799px) {
+    .container {
+        width: 350px;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .banner {
+        height: 94px;
+    }
+
+    .content {
+        gap: 8px;
+    }
+
+    .modal .logins {
+        gap: 8px;
+    }
+}

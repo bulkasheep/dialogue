@@ -1,0 +1,232 @@
+.navigation {
+    background: hsl(var(--bg-primary));
+    border-bottom: 1px solid hsl(var(--border-primary));
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.breadcrumbs {
+    padding: 16px 80px;
+}
+
+.breadcrumbs > :first-child {
+    display: none;
+}
+
+.chips {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+    padding: 0 80px;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+    padding: 120px 80px;
+}
+
+.section:first-of-type {
+    padding: 24px 80px;
+    z-index: 1;
+}
+
+.head {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.description {
+    color: hsl(var(--text-secondary));
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.paginated.section {
+    padding: 120px 0px;
+}
+
+.paginated .head {
+    padding: 0px 80px;
+}
+
+.blue.section {
+    background: hsl(var(--blue));
+}
+
+.blue .title {
+    color: white;
+}
+
+.blue .description {
+    color: hsl(var(--bg-primary));
+}
+
+.dialogue {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-areas:
+    "info info"
+    "filter button"
+    "video video";
+    grid-auto-flow: dense;
+    gap: 24px;
+    padding: 28px;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    grid-area: info;
+}
+
+.filter {
+    grid-area: filter;
+    width: 602px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: start;
+}
+
+.button {
+    grid-area: button;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+}
+.button::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: var(--16-download-icon) no-repeat center center;
+    margin-right: auto;
+}
+
+.video {
+    grid-area: video;
+}
+
+.line6,
+.line7 {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.line6 {
+    background: center top / contain no-repeat var(--line-6-image);
+    top: -288px;
+    aspect-ratio: 30 / 11;
+}
+.line7 {
+    background: center top / contain no-repeat var(--line-7-image);
+    bottom: -73px;
+    aspect-ratio: 45 / 13;
+    z-index: 1;
+}
+
+@media (max-width: 1109px) {
+    .dialogue {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .filter {
+        width: auto;
+        align-self: stretch;
+    }
+    .button {
+        justify-content: center;
+        order: 1;
+        padding: 16px 24px;
+    }
+    .button::after {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 799px) {
+    .navigation {
+        gap: 16px;
+    }
+    .back {
+        color: hsl(var(--icon-primary));
+        font-size: 14px;
+        line-height: 115%;
+    }
+    .breadcrumbs {
+        padding: 16px 20px 0 20px;
+    }
+    .breadcrumbs > :first-child {
+        display: block;
+    }
+    .breadcrumbs > :nth-child(2) {
+        display: none;
+    }
+    .chips {
+        gap: 4px;
+        padding: 0px 20px;
+    }
+    .section {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        padding: 80px 20px;
+    }
+    
+    .section:first-of-type {
+        padding: 20px;
+    }
+    .head {
+        gap: 8px;
+    }
+    .paginated.section {
+        padding: 80px 0px;
+    }
+    .paginated .head {
+        padding: 0px 20px;
+    }
+    .content {
+        gap: 28px;
+    }
+    .dialogue {
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 599px) {
+    .line6 {
+        background: center top / contain no-repeat var(--line-6-image-mobile);
+        top: auto;
+        bottom: -22px;
+        aspect-ratio: 26 / 11;
+    }
+    .line7 {
+        background: center top / contain no-repeat var(--line-7-image-mobile);
+        bottom: -40px;
+        aspect-ratio: 39 / 16;
+    }
+}

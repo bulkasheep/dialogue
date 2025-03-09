@@ -1,0 +1,96 @@
+.card {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    width: 522px;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    gap: 20px;
+}
+
+.content {
+    color: hsl(var(--text-secondary));
+}
+
+.mini .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-bottom: auto;
+}
+
+.link {
+    justify-self: flex-end;
+}
+
+.full .link {
+    display: none;
+}
+
+.banner {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    width: 522px;
+    display: grid;
+    grid-template-rows: auto max-content;
+    gap: 20px;
+}
+
+.mini.banner,
+.mini.card {
+    padding: 28px;
+}
+
+.head {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    padding: 12px 0px;
+    text-align: center;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.hilight {
+    color: hsl(var(--blue));
+}
+
+.logins {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 799px) {
+    .focusGroup {
+        padding: 0px 20px;
+    }
+    .mini .content {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+    .card,
+    .banner {
+        width: auto;
+        gap: 12px;
+    }
+    .card {
+        padding: 0;
+    }
+    .mini.card,
+    .mini.banner {
+        padding: 16px;
+    }
+    .head {
+        gap: 12px;
+        padding: 8px 0px;
+    }
+    .title {
+        font-size: 20px;
+    }
+}

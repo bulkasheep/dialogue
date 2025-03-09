@@ -1,0 +1,394 @@
+/* Поле ввода */
+
+.input {
+    background: transparent;
+    outline: 1px solid hsl(var(--border-primary));
+    border-radius: 16px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+
+    caret-color: hsl(var(--text-primary));
+    color: hsl(var(--text-primary));
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 121%;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    padding: 13px 16px;
+    transition: none 0.5 ease;
+    transition-property: outline;
+}
+.input::-moz-placeholder,
+.inpit::placeholder {
+    color: hsl(var(--border-primary));
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    text-decoration-skip-ink: inherit;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus, 
+.input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 100vw white inset;
+}
+.input:focus {
+    outline: 2px solid hsla(var(--blue), 80%);
+}
+
+/* Кнопка */
+
+.back {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.back::before {
+    content: "";
+    background: white var(--16-chevrone-left-icon) no-repeat center center;
+    border: 1px solid hsl(var(--text-primary));
+    border-radius: 100px;
+    display: block;
+    width: 38px;
+    height: 38px;
+}
+
+.chip {
+    color: hsl(var(--text-secondary));
+    display: block;
+    padding: 12px 16px;
+    transition: none 0.5s ease;
+    transition-property: color, box-shadow, -moz-box-shadow, -webkit-box-shadow;
+}
+.selected.chip {
+    color: hsl(var(--text-primary));
+    -webkit-box-shadow: 0px -6px 0px -2px hsl(var(--blue)) inset;
+    -moz-box-shadow: 0px -6px 0px -2px hsl(var(--blue)) inset;
+    box-shadow: 0px -6px 0px -2px hsl(var(--blue)) inset;
+}
+
+.dropdown {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: left;
+    gap: 4px;
+}
+
+.dropdown::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: transparent var(--16-chevrone-down-icon) center center;
+    transition: all 0.5s ease;
+}
+
+.opened.dropdown::after {
+    transform: rotate(180deg);
+}
+
+.button,
+.login {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Простая кнопка */
+
+.button {
+    transition: 0.5s ease;
+    transition-property: color, background;
+}
+
+.button.primary {
+    color: #FFFFFF;
+    background: hsl(var(--coral));
+    border-radius: 40px;
+    padding: 24px 60px;
+}
+.button.primary:hover,
+.button.primary:focus {
+    background: hsla(var(--coral), 60%);
+}
+.button.primary:active {
+    background: hsla(var(--coral), 80%);
+}
+.button.primary:disabled {
+    background: hsl(var(--border-primary));
+}
+
+.button.secondary,
+.button.secondary:active {
+    background: transparent;
+    color: hsl(var(--text-primary));
+    padding: 6px 0px;
+}
+.button.secondary:hover,
+.button.secondary:focus {
+    color: hsl(var(--text-secondary));
+}
+.button.secondary:active {
+    color: hsl(var(--text-primary));
+}
+.button.secondary:disabled {
+    color: hsl(var(--text-disabled));
+}
+
+/* Логин (нейтральный) */
+
+.login {
+    border-radius: 40px;
+    padding: 15px 20px;
+    transition: 0.5s ease;
+    transition-property: color, background, border, border-color;
+}
+
+.login.primary {
+    color: #FFFFFF;
+    background: hsl(var(--text-primary));
+    
+}
+.login.primary:hover {
+    background: hsla(var(--text-primary), 60%);
+}
+.login.primary:focus {
+    background: hsla(var(--text-primary), 80%);
+}
+.login.primary:active {
+    background: hsla(var(--text-primary), 90%);
+}
+.login.primary:disabled {
+    background: hsl(var(--border-primary));
+    color: hsl(var(--text-disabled));
+}
+
+.login.secondary {
+    color: hsl(var(--text-primary));
+    background: transparent;
+    border: 1px solid hsl(var(--text-primary));
+}
+.login.secondary:hover,
+.login.secondary:focus {
+    color: hsl(var(--text-secondary));
+    border-color: hsl(var(--text-secondary));
+}
+.login.secondary:active {
+    color: hsl(var(--text-primary));
+    border-color: hsl(var(--icon-primary));
+}
+.login.secondary:disabled {
+    color: hsl(var(--text-disabled));
+    border-color: hsl(var(--border-primary));
+}
+
+/* Логин (цвет) */
+
+.primary.color {
+    background: hsl(var(--coral));
+}
+.secondary.color {
+    color: hsl(var(--coral));
+    border-color: hsl(var(--coral));
+}
+
+.primary.color:focus,
+.primary.color:hover {
+    background: hsla(var(--coral), 60%);
+}
+
+.secondary.color:hover,
+.secondary.color:focus {
+    color: hsla(var(--coral), 60%);
+    border-color: hsla(var(--coral), 60%);
+}
+
+.primary.color:active {
+    background: hsla(var(--coral), 80%);
+}
+.secondary.color:active {
+    color: hsla(var(--coral), 80%);
+    border-color: hsla(var(--coral), 80%);
+}
+
+.primary.blue {
+    background: hsl(var(--blue));
+}
+
+.primary.blue:focus,
+.primary.blue:hover {
+    background: hsla(var(--blue), 60%);
+}
+
+.primary.blue:active {
+    background: hsla(var(--blue), 80%);
+}
+
+.primary.blue:disabled {
+    background: hsla(var(--blue), 50%);
+}
+
+/* Тема */
+
+.theme {
+    user-select: none;
+    background: transparent;
+    border: 1px solid hsl(var(--border-primary));
+    border-radius: 40px;
+    padding: 12px 16px;
+}
+
+.theme:hover,
+.theme:focus {
+    background: hsla(var(--bg-primary), 5%);
+}
+
+.theme:active {
+    background: hsla(var(--bg-primary), 10%);
+}
+
+.theme:disabled {
+    background: transparent;
+    border-color: hsl(var(--border-secondary));
+}
+
+/*Ссылка*/
+
+.link {
+    color: hsl(var(--blue));
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4px;
+    align-items: center;
+}
+.link::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: transparent var(--24-arrow-icon) no-repeat center center;
+}
+
+/*Обложка видео*/
+
+.cover {
+    cursor: pointer;
+    position: relative;
+    max-height: fit-content;
+}
+
+.cover img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.cover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--48-play-icon), radial-gradient(circle at 50%, #FFF, #FFF 40px, transparent 41px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px 48px, auto;
+    transition: background-size 0.5s ease;
+}
+
+.cover:hover::after,
+.cover:focus::after {
+    background-size: 58px 58px, auto;
+}
+
+.cover:active::after {
+    background-size: 54px 54px, auto;
+}
+
+.player:has(.timecode:hover)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    display: block;
+    border-radius: 22px;
+    background: hsla(0, 0%, 0%, 20%);
+}
+
+.controls {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 8px max-content;
+}
+
+.timeline {
+    --gradient: to right,
+        hsl(var(--coral)) 0%,
+        hsl(var(--coral)) var(--played),
+        hsl(var(--timeline)) var(--played),
+        hsl(var(--timeline)) var(--loaded),
+        transparent var(--loaded);
+
+    cursor: pointer;
+    position: relative;
+    background: hsla(var(--text-primary), 60%) -moz-linear-gradient(var(--gradient));
+    background: hsla(var(--text-primary), 60%) -webkit-linear-gradient(var(--gradient));
+    background: hsla(var(--text-primary), 60%) linear-gradient(var(--gradient));
+    user-select: none;
+}
+
+@media (max-width: 799px) {
+    .button {
+        font-size: 12px;
+    }
+    .primary,
+    .button.primary,
+    .login.primary {
+        padding: 18px 60px;
+    }
+    .login.color {
+        padding: 12px 16px;
+    }
+    .theme {
+        padding: 8px;
+    }
+    .link::after {
+        background: transparent var(--16-arrow-icon) no-repeat center center;
+    }
+    .avatar {
+        width: 160px;
+    }
+    .avatar.mini {
+        width: 36px;
+    }
+    .cover::after {
+        background-image: var(--48-play-icon), radial-gradient(circle at 50%, #FFF, #FFF 22px, transparent 23px);
+        background-size: 24px 24px, auto;
+    }
+    .cover:hover::after,
+    .cover:focus::after {
+        background-size: 29px 29px, auto;
+    }
+    .cover:active::after {
+        background-size: 27px 27px, auto;
+    }
+}

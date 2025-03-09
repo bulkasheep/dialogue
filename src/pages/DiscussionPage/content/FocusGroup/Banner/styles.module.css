@@ -1,0 +1,52 @@
+.banner {
+    background: hsl(var(--bg-secondary));
+    border-radius: 20px;
+    width: 522px;
+    display: grid;
+    grid-template-rows: auto max-content;
+    gap: 20px;
+    padding: 28px;
+}
+
+.head {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    padding: 12px 0px;
+    text-align: center;
+}
+
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.body {
+    color: hsl(var(--text-secondary));
+}
+
+.hilight {
+    color: hsl(var(--blue));
+}
+
+.logins {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 799px) {
+    .banner {
+        width: auto;
+        gap: 12px;
+        padding: 16px;
+    }
+    .head {
+        gap: 12px;
+        padding: 8px 0px;
+    }
+    .title {
+        font-size: 20px;
+    }
+}

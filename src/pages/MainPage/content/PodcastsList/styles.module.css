@@ -1,0 +1,24 @@
+.podcasts {
+    display: flex;
+    flex-flow: column nowrap;
+    border-top: 1px solid hsl(var(--border-primary));
+}
+
+.podcast {
+    padding: 28px 0;
+    border-bottom: 1px solid hsl(var(--border-primary));
+}
+
+.button {
+    align-self: flex-start;
+}
+
+@media (max-width: 799px) {
+    .podcast {
+        padding: 8px 0;
+        border-bottom: 1px solid hsl(var(--border-primary));
+    }
+    .button {
+        align-self: stretch;
+    }
+}

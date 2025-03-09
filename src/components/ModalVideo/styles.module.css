@@ -1,0 +1,20 @@
+.container {
+    width: 944px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 28px;
+    padding-top: 40px;
+}
+
+.button {
+    text-align: center;
+}
+
+@media (max-width: 999px) {
+    .container {
+        width: 100%;
+        align-items: stretch;
+        gap: 16px;
+    }
+}

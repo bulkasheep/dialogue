@@ -1,0 +1,25 @@
+.participants {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.filter {
+    position: absolute;
+    right: 80px;
+    bottom: calc(100% + 40px);
+    padding: inherit;
+}
+
+@media (max-width: 799px) {
+    .filter {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 959px) {
+    .filter {
+        position: static;
+        padding: 0 80px;
+    }
+}

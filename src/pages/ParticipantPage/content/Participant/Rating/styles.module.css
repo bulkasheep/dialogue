@@ -1,0 +1,17 @@
+.title {
+    color: hsl(var(--text-primary));
+}
+
+.link {
+    color: hsl(var(--blue));
+}
+
+.star {
+    width: 32px;
+}
+
+.dot {
+    width: 14px;
+    height: 10px;
+    background: radial-gradient(circle at 50%, hsl(var(--text-primary)) 0px, hsl(var(--text-primary)) 2px, transparent 3px);
+}

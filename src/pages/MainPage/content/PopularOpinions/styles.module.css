@@ -1,0 +1,20 @@
+.opinion {
+    display: inherit;
+    flex-flow: inherit;
+    gap: inherit;
+}
+
+.button {
+    align-self: flex-start;
+    margin: 0 80px;
+}
+
+@media (max-width: 799px) {
+    .cover img {
+        height: 238px;
+    }
+    .button {
+        align-self: stretch;
+        margin: 0 20px;
+    }
+}

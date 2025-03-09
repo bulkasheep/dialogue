@@ -1,0 +1,223 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration-skip-ink: none;
+
+    --navigation-left-icon: url("./assets/icons/Navigation Left.svg");
+    --navigation-right-icon: url("./assets/icons/Navigation Right.svg");
+
+    --16-arrow-down-icon: url("./assets/icons/16px/Arrow_down.svg");
+    --16-arrow-icon: url("./assets/icons/16px/Arrow.svg");
+    --16-chevrone-down-icon: url("./assets/icons/16px/Chevrone down.svg");
+    --16-chevrone-left-icon: url("./assets/icons/16px/Chevrone left.svg");
+    --16-chevrone-right-icon: url("./assets/icons/16px/Chevrone right.svg");
+    --16-chevrone-up-icon: url("./assets/icons/16px/Chevrone up.svg");
+    --16-download-icon: url("./assets/icons/16px/Download.svg");
+    --16-lock-icon: url("./assets/icons/16px/Lock.svg");
+    --16-pencil-icon: url("./assets/icons/16px/Pencil.svg");
+    
+    --24-video-collapse-icon: url("./assets/icons/24px/video/collapse.svg");
+    --24-video-expand-icon: url("./assets/icons/24px/video/expand.svg");
+    --24-video-next-icon: url("./assets/icons/24px/video/next.svg");
+    --24-video-pause-icon: url("./assets/icons/24px/video/pause.svg");
+    --24-video-play-icon: url("./assets/icons/24px/video/play.svg");
+    --24-video-previous-icon: url("./assets/icons/24px/video/previous.svg");
+    --24-video-restart-icon: url("./assets/icons/24px/video/restart.svg");
+    --24-video-soundoff-icon: url("./assets/icons/24px/video/soundoff.svg");
+    --24-video-soundon-icon: url("./assets/icons/24px/video/soundon.svg");
+    
+    --24-eye-icon: url("./assets/icons/24px/Eye.svg");
+    --24-arrow-down-icon: url("./assets/icons/24px/Arrow_down.svg");
+    --24-arrow-icon: url("./assets/icons/24px/Arrow.svg");
+    --24-burger-icon: url("./assets/icons/24px/Burger.svg");
+    --24-pencil-icon: url("./assets/icons/24px/Pencil.svg");
+    --24-search-icon: url("./assets/icons/24px/Search.svg");
+    --24-x-icon: url("./assets/icons/24px/X.svg");
+
+    --40-logout-icon: url("./assets/icons/40px/Logout.svg");
+    --40-inst-icon: url("./assets/icons/40px/Inst.svg");
+    --40-play-icon: url("./assets/icons/40px/Play.svg");
+    --40-tg-icon: url("./assets/icons/40px/TG.svg");
+    --40-vk-icon: url("./assets/icons/40px/VK.svg");
+    
+    --48-inst-icon: url("./assets/icons/48px/Inst.svg");
+    --48-play-icon: url("./assets/icons/48px/Play.svg");
+    --48-tg-icon: url("./assets/icons/48px/TG.svg");
+    --48-vk-icon: url("./assets/icons/48px/VK.svg");
+
+    --quotation-left-blue-icon: url("./assets/icons/Quotation/Blue/Left.svg");
+    --quotation-right-blue-icon: url("./assets/icons/Quotation/Blue/Right.svg");
+    --quotation-left-orange-icon: url("./assets/icons/Quotation/Orange/Left.svg");
+    --quotation-right-orange-icon: url("./assets/icons/Quotation/Orange/Right.svg");
+
+    --line-1-image: url("./assets/images/Desctop/Line_1.svg");
+    --line-2-image: url("./assets/images/Desctop/Line_2.svg");
+    --line-3-image: url("./assets/images/Desctop/Line_3.svg");
+    --line-4-image: url("./assets/images/Desctop/Line_4.svg");
+    --line-5-image: url("./assets/images/Desctop/Line_5.svg");
+    --line-6-image: url("./assets/images/Desctop/Line_6.svg");
+    --line-7-image: url("./assets/images/Desctop/Line_7.svg");
+    
+    --line-1-image-mobile: url("./assets/images/Mobile/Line_1.svg");
+    --line-2-image-mobile: url("./assets/images/Mobile/Line_2.svg");
+    --line-3-image-mobile: url("./assets/images/Mobile/Line_3.svg");
+    --line-4-image-mobile: url("./assets/images/Mobile/Line_4.svg");
+    --line-5-image-mobile: url("./assets/images/Mobile/Line_5.svg");
+    --line-6-image-mobile: url("./assets/images/Mobile/Line_6.svg");
+    --line-7-image-mobile: url("./assets/images/Mobile/Line_7.svg");
+
+    --listen-image: url("./assets/images/Listen.svg");
+    --read-image: url("./assets/images/Read.svg");
+    --watch-image: url("./assets/images/Watch.svg");
+
+    --listen-image-mobile: url("./assets/images/Listen_mobile.svg");
+    --read-image-mobile: url("./assets/images/Read_mobile.svg");
+    --watch-image-mobile: url("./assets/images/Watch_mobile.svg");
+
+    --tablet-width: 799px;
+    
+    /*--text-primary: #191B20;
+    --text-secondary: #47494D;
+    --text-disabled: #8C8D8F;
+    --text-dark: #14142A;
+    --text-grey: #757679;
+    --text-light-grey: #7BBA97;
+
+    --icon-primary: #303236;
+    --icon-secondary: #5E5F63;
+    --icon-disabled: #8C8D8F;
+
+    --border-primary: #BABBBC;
+    --border-secondary: #E8E8E9;
+
+    --bg-primary: #F5F5F5;
+    --bg-secondary: #FFFFFF;
+
+    --coral: #FF7B4C;
+    --blue: #4C89EB;
+    --violet: #7A59F1;
+    --yellow: #ECF25D;
+    --mint: #3FEBCE;
+    --success: #14C47D;
+    --attention: #F37548;
+    --error: #E8021E;
+    --dark-blue: #101828;
+    --timeline: #D1D1D2;*/
+    
+    --text-primary: 220, 11%, 11%;
+    --text-secondary: 220, 4%, 29%;
+    --text-disabled: 220, 1%, 55%;
+    --text-dark: 240, 35%, 12%;
+    --text-grey: 225, 2%, 47%;
+    --text-light-grey: 147, 31%, 61%;
+
+    --icon-primary: 220, 6%, 20%;
+    --icon-secondary: 228, 3%, 38%;
+    --icon-disabled: 220, 1%, 55%;
+
+    --border-primary: 210, 1%, 73%;
+    --border-secondary: 240, 2%, 91%;
+
+    --bg-primary: 0, 0%, 96%;
+    --bg-secondary: 0, 0%, 100%;
+
+    --coral: 16, 100%, 65%;
+    --blue: 217, 80%, 61%;
+    --violet: 253, 84%, 65%;
+    --yellow: 62, 85%, 66%;
+    --mint: 170, 81%, 58%;
+    --success: 156, 81%, 42%;
+    --attention: 16, 88%, 62%;
+    --error: 353, 98%, 46%;
+    --dark-blue: 220, 43%, 11%;
+    --timeline: 240, 1%, 82%;
+}
+
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited, a:hover   {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}

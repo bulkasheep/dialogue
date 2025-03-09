@@ -1,0 +1,25 @@
+.theme {
+    color: hsl(var(--text-primary));
+}
+
+.themes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.button {
+    align-self: center;
+}
+
+@media (max-width: 799px) {
+    .themes {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .button {
+        align-self: flex-start;
+    }
+}

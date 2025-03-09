@@ -1,0 +1,68 @@
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: hsl(var(--bg-secondary));
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    width: 413px;
+    height: 440px;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 28px;
+    border-radius: 20px;
+}
+.card a {
+    cursor: pointer;
+    color: hsl(var(--blue));
+    font-weight: 700;
+}
+
+.cardTitle,
+.cardDescription {
+    color: hsl(var(--text-primary));
+}
+
+.card:nth-child(1) {
+    background-image: var(--watch-image);
+    background-position: top center;
+}
+.card:nth-child(2) {
+    background-image: var(--listen-image);
+    background-position: bottom right;
+    justify-content: flex-start;
+}
+.card:nth-child(3) {
+    background-image: var(--read-image);
+    background-position: top right;
+}
+
+@media (max-width: 799px) {
+    .cards {
+        gap: 8px;
+    }
+    .card {
+        width: 350px;
+        height: 320px;
+        gap: 8px;
+    }
+    .card:nth-child(1) {
+        background-image: var(--watch-image-mobile);
+        background-position: top center;
+    }
+    .card:nth-child(2) {
+        background-image: var(--listen-image-mobile);
+        background-position: bottom right;
+        justify-content: flex-start;
+    }
+    .card:nth-child(3) {
+        background-image: var(--read-image-mobile);
+        background-position: top right;
+    }
+}/**/

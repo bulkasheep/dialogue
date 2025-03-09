@@ -1,0 +1,20 @@
+.navigation {
+    display: flex;
+}
+
+.header.navigation {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-grow: 1;
+}
+.menu.navigation {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 16px;
+}
+@media (max-width: 799px) {
+    .header.navigation {
+        display: none;
+    }
+}

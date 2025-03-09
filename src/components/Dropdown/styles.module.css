@@ -1,0 +1,16 @@
+.dropdown {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.list {
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 0.25s ease;
+}
+
+.opened.list {
+    transform: scaleY(1);
+}
